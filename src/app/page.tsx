@@ -112,7 +112,11 @@ export default function Home() {
 
   function handleAddToCart() {
     if (outfit.top && outfit.bottom && outfit.shoe) {
-      setCart((prevCart) => [...prevCart, outfit]);
+      setCart((prevCart) => {
+        const newCart = [...prevCart, outfit];
+        console.log("Current Cart:", newCart);
+        return newCart;
+      });
 
       alert("Success! Outfit added to your cart.");
       handleReset();
@@ -123,7 +127,11 @@ export default function Home() {
 
   function handleSaveOutfit() {
     if (outfit.top && outfit.bottom && outfit.shoe) {
-      setSavedOutfits((prevSaved) => [...prevSaved, outfit]);
+      setSavedOutfits((prevSaved) => {
+        const newSavedOutfits = [...prevSaved, outfit];
+        console.log("Saved Outfits:", newSavedOutfits);
+        return newSavedOutfits;
+      });
 
       alert("Success! Outfit saved.");
 
