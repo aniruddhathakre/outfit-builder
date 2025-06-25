@@ -56,8 +56,8 @@ export default function Home() {
     bottom: null,
     shoe: null,
   });
-  const [cart, setCart] = useState<Outfit[]>([]);
-  const [savedOutfits, setSavedOutfits] = useState<Outfit[]>([]);
+  const [, setCart] = useState<Outfit[]>([]);
+  const [, setSavedOutfits] = useState<Outfit[]>([]);
 
   function handleDragStart(event: DragStartEvent) {
     const { active } = event;
@@ -112,11 +112,7 @@ export default function Home() {
 
   function handleAddToCart() {
     if (outfit.top && outfit.bottom && outfit.shoe) {
-      setCart((prevCart) => {
-        const newCart = [...prevCart, outfit];
-        console.log("Current Cart:", newCart);
-        return newCart;
-      });
+      setCart((prevCart) => [...prevCart, outfit]);
 
       alert("Success! Outfit added to your cart.");
       handleReset();
@@ -127,11 +123,7 @@ export default function Home() {
 
   function handleSaveOutfit() {
     if (outfit.top && outfit.bottom && outfit.shoe) {
-      setSavedOutfits((prevSaved) => {
-        const newSavedOutfits = [...prevSaved, outfit];
-        console.log("Saved Outfits:", newSavedOutfits);
-        return newSavedOutfits;
-      });
+      setSavedOutfits((prevSaved) => [...prevSaved, outfit]);
 
       alert("Success! Outfit saved.");
 
