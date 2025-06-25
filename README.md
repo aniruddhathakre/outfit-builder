@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Outfit Builder
+
+[cite_start]A web-based WYSIWYG (What You See Is What You Get) editor built with Next.js that allows users to visually mix and match different clothing items by dragging and dropping them into a virtual canvas.
+
+---
+
+## Key Features
+
+- [cite_start]**Drag-and-Drop Interface:** Users can drag clothing items from a categorized sidebar.
+- [cite_start]**Visual Outfit Assembly:** A dynamic canvas area displays the selected top, bottom, and shoe to visualize the complete outfit.
+- **Responsive Design:** The application features a professional, responsive layout that works on both desktop and mobile devices.
+  - On desktop, a two-column layout provides a full view of items and the canvas.
+  - On mobile, a "Mini-Canvas" sticky footer provides an excellent user experience for dragging and dropping, while a full preview is available on scroll.
+- **State Management:** Uses React hooks to manage the state of the active outfit, saved outfits, and the shopping cart.
+- [cite_start]**Cart & Save Logic:** Functional "Add to Cart", "Save Outfit", and "Reset" buttons to manage the created outfits.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have Node.js and npm installed on your machine.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- You can download Node.js (which includes npm) from [https://nodejs.org/](https://nodejs.org/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1.  Clone the repository (or download the source code).
+2.  Navigate into the project directory:
+    ```sh
+    cd your-project-name
+    ```
+3.  Install NPM packages:
+    ```sh
+    npm install
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+### Running the Application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- To run the app in development mode, execute the following command:
+  ```sh
+  npm run dev
+  ```
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Additional Instructions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The clothing assets are located in the `/public` directory, categorized into `tops`, `bottoms`, and `shoes`.
+- The project is built with the Next.js App Router and styled using Tailwind CSS.
